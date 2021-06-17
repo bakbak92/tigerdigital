@@ -36,6 +36,13 @@ export default {
     'nuxt-buefy',
     // https://go.nuxtjs.dev/axios
     '@nuxtjs/axios',
+      [
+        'nuxt-sass-resources-loader', 
+        [
+            'assets/scss/file/_path.scss',
+            'assets/scss/file/_path-two.scss'
+        ]
+    ]
   ],
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios

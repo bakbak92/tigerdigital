@@ -2,7 +2,6 @@
   <div>
     <nav class="navbar" role="navigation" aria-label="main navigation">
       <div class="navbar-brand">
-        <img src="../assets/logo.png" alt="">
         <a class="navbar-item is-primary logo">Tiger Digital</a>
 
         <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
@@ -44,13 +43,25 @@
   </div>
   
 </template>
-<style>
+<style lang="scss">
 .logo{
   font-size: 18px;
   font-weight: 600;
-  color: #7958d5;
+  color: #3edbf0;
+}
+.navbar{
+  .navbar-item{
+    &:hover{
+      color: #3edbf0;
+    }
+  }
 }
 .center{
   text-align: center;
+}
+footer{
+  a{
+    color: #3edbf0;
+  }
 }
 </style>

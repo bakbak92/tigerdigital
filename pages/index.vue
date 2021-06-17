@@ -8,12 +8,12 @@
         <p class="subtitle">
           Officiis laboriosam repudiandae, quaerat culpa minus similique nihil ipsum tenetur itaque nulla in dicta quibusdam nemo sit incidunt possimus eveniet.
         </p>
-         <button class="button is-primary">
+         <button class="button btn">
            Call to Action
          </button>
       </div>
       <div class="column">
-        <img src="../assets/head-social.png" alt="">
+        <img src="../assets/social_media.png" alt="">
       </div>
     </div>
     <h2 class="title center">
@@ -24,7 +24,7 @@
         <div class="card-content">
           <div class="card-image">
             <figure class="image is-4by3">
-              <img src="../assets/code.png" alt="Placeholder image">
+              <img src="../assets/dev.png" alt="Placeholder image">
             </figure>
           </div>
           <div class="content">
@@ -37,7 +37,7 @@
         <div class="card-content">
           <div class="card-image">
             <figure class="image is-4by3">
-              <img src="../assets/social.png" alt="Placeholder image">
+              <img src="../assets/facebook.png" alt="Placeholder image">
             </figure>
           </div>
           <div class="content">
@@ -50,7 +50,7 @@
         <div class="card-content">
           <div class="card-image">
             <figure class="image is-4by3">
-              <img src="../assets/business.png" alt="Placeholder image">
+              <img src="../assets/busines.png" alt="Placeholder image">
             </figure>
           </div>
           <div class="content">
@@ -79,10 +79,10 @@
 
       <div class="field is-grouped">
         <div class="control">
-          <button class="button is-link">Submit</button>
+          <button class="button btn">Submit</button>
         </div>
         <div class="control">
-          <button class="button is-link is-light">Cancel</button>
+          <button class="button btn-cancel">Cancel</button>
         </div>
       </div>
     </div>
@@ -100,7 +100,7 @@ export default {
   }
 }
 </script>
-<style>
+<style lang="scss">
 .presentation{
   text-align: center;
 }
@@ -115,5 +115,27 @@ export default {
 }
 .title{
   margin-top: 32px;
+  color: #0F1B4C;
+}
+.btn{
+  background-color: #3edbf0;
+  color: white;
+  border-color: #3edbf0!important;
+  &:hover{
+    background-color: white;
+    color: #3edbf0;
+  }
+}
+.btn-cancel{
+  background-color: white;
+  color: #3edbf0;
+  border-color: #3edbf0!important;
+  &:hover{
+    background-color: #3edbf0;
+    color: white;
+  }
+}
+h1{
+  color: #2a3d66;
 }
 </style>
