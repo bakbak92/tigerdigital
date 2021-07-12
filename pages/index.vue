@@ -3,13 +3,14 @@
     <div class="columns is-mobile">
       <div class="column presentation">
         <h1 class="title">
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolorum quod
+          Booster votre business grâce au Marketing Digital
         </h1>
         <p class="subtitle">
-          Officiis laboriosam repudiandae, quaerat culpa minus similique nihil ipsum tenetur itaque nulla in dicta quibusdam nemo sit incidunt possimus eveniet.
+          Vous apportez la meilleure visibilité à travers différents canaux tel que Facebook Instagram Youtube ou Google
+          L'objectif est de mettre en place une stratégie digitale clé en main pour vous permettre de générer des propspects de manière récurrente .Et d'également améliorer l'image de marque de votre entreprise
         </p>
          <button class="button btn">
-           Call to Action
+           Nous contacer
          </button>
       </div>
       <div class="column">
@@ -23,12 +24,23 @@
       <div class="card">
         <div class="card-content">
           <div class="card-image">
-            <figure class="image is-4by3">
-              <img src="../assets/dev.png" alt="Placeholder image">
-            </figure>
+            <img src="../assets/dev.png" alt="Placeholder image">
           </div>
+          <h2>Dévelopement application / site</h2>
           <div class="content">
-            Lorem ipsum leo risus, porta ac consectetur ac, vestibulum at eros. Donec id elit non mi porta gravida at eget metus. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Cras mattis consectetur purus sit amet fermentum.
+            Vous souhaitez une application web ou mobile, un site vitrine pour avoir une présence en ligne ? un e-commerce pour pouvoir vendre vos produit en ligne.
+            Nos développeurs sont la pour vous dévoleppez une application / site sur mesure performant et optimisé.
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-content">
+            <img src="../assets/facebook.png" alt="Placeholder image">
+          <h2>Facebook ADS</h2>
+          <div class="content">
+            Vous souhaitez booster votre trafic et vos ventes ? Elargir votre audience et votre stratégie marketing ?
+            Facebook ads est l’opportunité qui vous faut pour propulser votre business toujours plus haut.
           </div>
         </div>
       </div>
@@ -36,26 +48,11 @@
       <div class="card">
         <div class="card-content">
           <div class="card-image">
-            <figure class="image is-4by3">
-              <img src="../assets/facebook.png" alt="Placeholder image">
-            </figure>
+            <img src="../assets/busines.png" alt="Placeholder image">
           </div>
+          <h2>Creation de Funnel / Conversion</h2>
           <div class="content">
-            Lorem ipsum leo risus, porta ac consectetur ac, vestibulum at eros. Donec id elit non mi porta gravida at eget metus. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Cras mattis consectetur purus sit amet fermentum.
-          </div>
-        </div>
-      </div>
-
-      <div class="card">
-        <div class="card-content">
-          <div class="card-image">
-            <figure class="image is-4by3">
-              <img src="../assets/busines.png" alt="Placeholder image">
-            </figure>
-          </div>
-          <div class="content">
-            Lorem ipsum leo risus, porta ac consectetur ac, vestibulum at eros. Donec id elit non mi porta gravida at eget metus. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Cras mattis consectetur purus sit amet fermentum.
-          </div>
+            Nous créons des funnels sur mesure afin d'attirer vos prospects et de les convertir en clients . Les funnels créés sont spécialement conçus pour avoir un haut taux de conversion. Ne laissez plus vos prospects quittez votre pag          </div>
         </div>
       </div>
       
@@ -64,9 +61,9 @@
     <div class="container">
       <h2 class="title center">Contactez-nous</h2>
       <div class="field">
-        <label class="label">Name</label>
+        <label class="label">Nom, Prénom</label>
         <div class="control">
-          <input class="input" type="text" placeholder="Text input">
+          <input class="input" type="text" placeholder="Nom, Prénom">
         </div>
       </div>
 
