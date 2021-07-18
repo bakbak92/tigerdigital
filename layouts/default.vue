@@ -1,31 +1,6 @@
 <template>
-  <div>
-    <nav class="navbar" role="navigation" aria-label="main navigation">
-      <div class="navbar-brand">
-        <a class="navbar-item is-primary logo">Tiger Digital</a>
-
-        <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
-          <span aria-hidden="true"></span>
-          <span aria-hidden="true"></span>
-          <span aria-hidden="true"></span>
-        </a>
-      </div>
-
-      <div id="navbarBasicExample" class="navbar-menu">
-
-        <div class="navbar-end">
-          <a class="navbar-item">
-            Nos services
-          </a>
-          <a class="navbar-item">
-            Qui sommes nous
-          </a>
-          <a class="navbar-item">
-            Contact
-          </a>
-        </div>
-      </div>
-    </nav>
+  <main>
+    <nav-bar></nav-bar>
 
     <div class="container column is-10">
       <nuxt />
@@ -40,14 +15,44 @@
       </div>
     </footer>
 
-  </div>
+  </main>
   
 </template>
+<script>
+import NavBar from "../components/NavBar"
+
+export default {
+  components: {
+    NavBar
+  }
+}
+</script>
+
 <style lang="scss">
+body{
+  margin: 0;
+}
+main{
+  font-family: 'Open Sans', sans-serif;
+  background-color: #fffffe;
+  color: #2d334a;
+}
+
 .logo{
   font-size: 18px;
   font-weight: 600;
   color: #3edbf0;
+}
+
+.btn{
+  background-color: #3edbf0;
+  border: 1px solid #3edbf0;
+  border-style: none;
+  padding: 10px 16px;
+  border-radius: 4px;
+  &:hover{
+    background-color: #bae8e8;
+  }
 }
 .navbar{
   .navbar-item{
