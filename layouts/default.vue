@@ -6,13 +6,9 @@
       <nuxt />
     </div>
     <footer class="footer">
-      <div class="content has-text-centered">
         <p>
-          <strong>Bulma</strong> by <a href="https://jgthms.com">Jeremy Thomas</a>. The source code is licensed
-          <a href="http://opensource.org/licenses/mit-license.php">MIT</a>. The website content
-          is licensed <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY NC SA 4.0</a>.
+          © 2021 Tiger Digital | <a href="mailto:contact@tiger-gital.com">contact@tiger-digital.com</a> | Suivez nous <a href="http://https://www.instagram.com/bramsforreal/"><i class="fab fa-instagram"></i></a>
         </p>
-      </div>
     </footer>
 
   </main>
@@ -36,6 +32,7 @@ main{
   font-family: 'Open Sans', sans-serif;
   background-color: #fffffe;
   color: #2d334a;
+  overflow: hidden;
 }
 
 .logo{
@@ -45,28 +42,26 @@ main{
 }
 
 .btn{
-  background-color: #3edbf0;
-  border: 1px solid #3edbf0;
+  background-color: #ffd803;
+  border: none;
   border-style: none;
-  padding: 10px 16px;
+  padding: 0 32px;
   border-radius: 4px;
+  line-height: 48px;
   &:hover{
     background-color: #bae8e8;
   }
 }
-.navbar{
-  .navbar-item{
-    &:hover{
-      color: #3edbf0;
-    }
-  }
-}
+
 .center{
   text-align: center;
 }
 footer{
+  text-align: center;
+  overflow: hidden;
+  line-height: 60px;
   a{
-    color: #3edbf0;
+    color: #ffd803
   }
 }
 </style>
