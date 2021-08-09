@@ -124,7 +124,7 @@ export default {
   padding: 30px 100px;
 
   display: flex;
-  @media (max-width: 500px) {
+  @media (max-width: 769px) {
     display: block;
     padding: 20px;
     .desc{
@@ -150,25 +150,27 @@ export default {
 #services{
   background-color: #e3f6f5;
   overflow: hidden;
-  padding-top: 20px;
+  padding: 20px 100px;
   h2{
     text-align: center;
   }
   .cards{
     display: flex;
-    margin: 0 80px;
-    margin-bottom: 40px;
     .card{
       margin: 20px;
       background-color: #fffffe;
+      border-radius: 4px;
       .content-img{
         text-align: center;
+        img{
+          width: 300px;
+        }
       }
       p{
         padding: 20px;
       }
     }
-    @media (max-width: 500px) {
+    @media (max-width: 769px) {
       display: block;
       margin: 0 0px;
       h2{
@@ -176,12 +178,15 @@ export default {
       }
     }
   }
+  @media (max-width: 769px) {
+      padding: 20px!important;
+    }
 }
 #why-are-we{
     display: flex;
     margin: 0 100px;
     padding: 40px 0;
-    @media (max-width: 500px) {
+    @media (max-width: 769px) {
       display: block;
       margin: 0 20px;
       .content-img{
@@ -201,9 +206,17 @@ export default {
 #contact{
   background-color: #e3f6f5;
   padding: 30px 100px;
-  @media (max-width: 500px) {
+  @media (max-width: 769px) {
     display: block;
     padding: 20px;
+    .row{
+      display: block!important;
+      margin-top: 0!important;
+      .col .content-input{
+        margin-right: 0!important;
+        margin-bottom: 20px;
+      }
+    }
   }
   .row{
     display: grid;
@@ -247,7 +260,7 @@ export default {
     }
   }
 }
-@media (max-width: 500px){
+@media (max-width: 769px){
   .content-img{
     text-align: center;
     img{
@@ -256,6 +269,11 @@ export default {
   }
   .content-btn{
     text-align: center;
+  }
+}
+@media (min-width:769px) and (max-width: 1200px) {
+  section{
+    padding: 20px 60px!important;
   }
 }
 </style>

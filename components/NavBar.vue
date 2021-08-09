@@ -1,16 +1,16 @@
 <template>
 <header>
     <nav class="desktop">
-        <img src="../assets/logo-1.png" alt="">
+        <img src="../assets/logo-2.png" alt="">
         <ul>
             <li>
-                <a href="">Nos services</a>
+                <a href="#services">Nos services</a>
             </li>
             <li>
-                <a href="">Qui sommes nous</a>
+                <a href="#why-are-we">Qui sommes nous</a>
             </li>
             <li>
-                <a href="">Contact</a>
+                <a href="#contact">Contact</a>
             </li>
         </ul>
     </nav>
@@ -18,18 +18,46 @@
         <div class="content-nav">
             <img src="../assets/logo-1.png" alt="">
             <span>
-                <i class="fas fa-bars"></i>
+                <i class="fas fa-bars" @click="isActive = true"></i>
             </span>
         </div>
     </nav>
+    <div class="nav-dropdown" v-if="isActive">
+        <ul>
+            <li>
+                <a href="#services" @click="isActive = false">Nos services</a>
+            </li>
+            <li>
+                <a href="#why-are-you" @click="isActive = false">Qui sommes nous</a>
+            </li>
+            <li>
+                <a href="#contact" @click="isActive = false">Contact</a>
+            </li>
+        </ul>
+        <span>
+            <i class="fas fa-times" @click="isActive = false"></i>
+        </span>
+    </div>
 </header>
 </template>
+<script>
+export default {
+    data(){
+        return {
+            isActive: false
+        }
+    }
+}
+</script>
 <style lang="scss">
 .desktop{
     display: flex;
     justify-content: space-between;
     padding: 20px 100px;
-    @media (max-width: 500px){
+    @media (max-width: 1200px){
+        padding: 20px 60px!important;
+    }
+    @media (max-width: 769px){
         display: none;
     }
     ul{
@@ -58,7 +86,7 @@
 .mobile{
     display: none;
     padding: 20px;
-    @media (max-width: 500px){
+    @media (max-width: 769px){
         display: block;
     }
     .content-nav{
@@ -72,6 +100,30 @@
             font-size: 30px;
             cursor: pointer;
         }
+    }
+}
+.nav-dropdown{
+    background-color: white;
+    position: fixed;
+    top: 0;
+    height: 100vh;
+    width: 100%;
+    ul{
+        list-style: none;
+        li{
+            font-size: 20px;
+            margin-top: 20px;
+            a{
+                text-decoration: none;
+                color: #2d334a;
+            }
+        }
+    }
+    span{
+        position: absolute;
+        right: 20px;
+        top: 20px;
+        font-size: 20px;
     }
 }
 </style>

@@ -7,7 +7,9 @@
     </div>
     <footer class="footer">
         <p>
-          © 2021 Tiger Digital | <a href="mailto:contact@tiger-gital.com">contact@tiger-digital.com</a> | Suivez nous <a href="http://https://www.instagram.com/bramsforreal/"><i class="fab fa-instagram"></i></a>
+          © 2021 Tiger Digital | <a href="mailto:contact@tiger-gital.com">contact@tiger-digital.com</a> | Suivez nous <a href="https://www.instagram.com/bramsforreal/" target="_blank">
+          <i class="fab fa-instagram"></i>
+          </a>
         </p>
     </footer>
 
