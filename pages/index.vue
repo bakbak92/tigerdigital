@@ -124,7 +124,7 @@ export default {
   padding: 30px 100px;
 
   display: flex;
-  @media (max-width: 769px) {
+  @media (max-width: 800px) {
     display: block;
     padding: 20px;
     .desc{
@@ -170,7 +170,7 @@ export default {
         padding: 20px;
       }
     }
-    @media (max-width: 769px) {
+    @media (max-width: 800px) {
       display: block;
       margin: 0 0px;
       h2{
@@ -178,7 +178,7 @@ export default {
       }
     }
   }
-  @media (max-width: 769px) {
+  @media (max-width: 800px) {
       padding: 20px!important;
     }
 }
@@ -186,7 +186,7 @@ export default {
     display: flex;
     margin: 0 100px;
     padding: 40px 0;
-    @media (max-width: 769px) {
+    @media (max-width: 800px) {
       display: block;
       margin: 0 20px;
       .content-img{
@@ -206,7 +206,7 @@ export default {
 #contact{
   background-color: #e3f6f5;
   padding: 30px 100px;
-  @media (max-width: 769px) {
+  @media (max-width: 800px) {
     display: block;
     padding: 20px;
     .row{
@@ -260,7 +260,7 @@ export default {
     }
   }
 }
-@media (max-width: 769px){
+@media (max-width: 800px){
   .content-img{
     text-align: center;
     img{
@@ -271,7 +271,7 @@ export default {
     text-align: center;
   }
 }
-@media (min-width:769px) and (max-width: 1200px) {
+@media (min-width:800px) and (max-width: 1200px) {
   section{
     padding: 20px 60px!important;
   }

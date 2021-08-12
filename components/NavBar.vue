@@ -57,7 +57,7 @@ export default {
     @media (max-width: 1200px){
         padding: 20px 60px!important;
     }
-    @media (max-width: 769px){
+    @media (max-width: 800px){
         display: none;
     }
     ul{
@@ -86,7 +86,7 @@ export default {
 .mobile{
     display: none;
     padding: 20px;
-    @media (max-width: 769px){
+    @media (max-width: 800px){
         display: block;
     }
     .content-nav{
