@@ -15,7 +15,7 @@ export default {
       }
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/logo-2.png' }
+      { rel: 'icon', type: 'image/x-icon', href: '/logo-3.png' }
     ],
     script: [
       {

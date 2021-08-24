@@ -1,7 +1,7 @@
 <template>
 <header>
     <nav class="desktop">
-        <img src="../assets/logo-2.png" alt="">
+        <img src="../assets/logo-3.png" alt="">
         <ul>
             <li>
                 <a href="#services">Nos services</a>
@@ -16,7 +16,7 @@
     </nav>
     <nav class="mobile">
         <div class="content-nav">
-            <img src="../assets/logo-1.png" alt="">
+            <img src="../assets/logo-3.png" alt="">
             <span>
                 <i class="fas fa-bars" @click="isActive = true"></i>
             </span>
@@ -63,6 +63,7 @@ export default {
     ul{
         display: flex;
         margin: 0;
+        padding-top: 10px;
         li{
             list-style: none;
             margin-left: 20px;
