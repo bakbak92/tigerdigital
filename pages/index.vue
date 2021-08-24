@@ -9,9 +9,11 @@
           Vous apportez la meilleure visibilité à travers différents canaux tels que Facebook Instagram Youtube où google L'objectif est de mettre en place une stratégie digitale clé en main pour vous permettre de générer des prospects de manière récurrente .Et d'également améliorer l'image de marque de votre entreprise.
         </p>
         <div class="content-btn">
-          <button class="button btn" @click="$router.push(`/#contact`)">
-           Nous contacter
-         </button>
+          <a href="#contact">
+            <button class="button btn" @click="$router.push(`/#contact`)">
+            Nous contacter
+          </button>
+          </a>
         </div>
       </div>
       <div class="content-img">
