@@ -101,7 +101,7 @@
             <button type="submit">Envoyer</button>
           </div>
         </div>
-        <p class="error">Votre message a bien été envoyer</p>
+        <p class="success" v-if="success">Votre message a bien été envoyer</p>
       </form>
     </section>
 
@@ -126,14 +126,15 @@ export default {
         email: null,
         message: null,
         telephone: null
-      }
+      },
+      success: false
     }
   },
   methods: {
     sendMessage(){
       fireDb.collection("prospects").add(this.contact)
-      .then((docRef) => {
-          console.log("Document written with ID: ", docRef.id);
+      .then(() => {
+        this.success = true;
       })
       .catch((error) => {
           console.error("Error adding document: ", error);
@@ -240,6 +241,11 @@ export default {
         margin-bottom: 20px;
       }
     }
+  }
+  .success{
+    color: #50CB93;
+    text-align: center;
+    font-size: 18px;
   }
   .row{
     display: grid;
