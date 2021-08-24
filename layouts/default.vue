@@ -18,10 +18,23 @@
 </template>
 <script>
 import NavBar from "../components/NavBar"
+import {fireDb} from '~/plugins/firebase.js'
+
 
 export default {
   components: {
     NavBar
+  },
+  mounted(){
+    //fireDb.collection("prospects");
+
+  fireDb.collection("prospects").get().then((querySnapshot) => {
+      querySnapshot.forEach((doc) => {
+          // doc.data() is never undefined for query doc snapshots
+          console.log(doc.id, " => ", doc.data());
+      });
+  });
+
   }
 }
 </script>
@@ -51,8 +64,11 @@ main{
   border-radius: 4px;
   line-height: 48px;
   &:hover{
-    background-color: #bae8e8;
+    opacity: 0.8;
   }
+}
+button{
+  cursor: pointer;
 }
 
 .center{

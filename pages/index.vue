@@ -6,12 +6,11 @@
           Booster votre business grâce au Marketing Digital
         </h1>
         <p>
-          Vous apportez la meilleure visibilité à travers différents canaux tel que Facebook Instagram Youtube ou Google
-          L'objectif est de mettre en place une stratégie digitale clé en main pour vous permettre de générer des propspects de manière récurrente .Et d'également améliorer l'image de marque de votre entreprise
+          Vous apportez la meilleure visibilité à travers différents canaux tels que Facebook Instagram Youtube où google L'objectif est de mettre en place une stratégie digitale clé en main pour vous permettre de générer des prospects de manière récurrente .Et d'également améliorer l'image de marque de votre entreprise.
         </p>
         <div class="content-btn">
-          <button class="button btn">
-           Nous contacer
+          <button class="button btn" @click="$router.push(`/#contact`)">
+           Nous contacter
          </button>
         </div>
       </div>
@@ -28,8 +27,8 @@
             <img src="../assets/dev.png" alt="">
           </div>
           <p>
-            Vous souhaitez une application web ou mobile, un site vitrine pour avoir une présence en ligne ? un e-commerce pour pouvoir vendre vos produit en ligne.
-            Nos développeurs sont la pour vous dévoleppez une application / site sur mesure performant et optimisé.
+            Vous souhaitez une application web ou mobile, un site vitrine pour avoir une présence en ligne ? un e-commerce pour pouvoir vendre vos produits en ligne.
+            Nos développeurs sont là pour vous développez une application / site sur mesure performant et optimisé.
           </p>
         </div>
         <div class="card">
@@ -38,17 +37,17 @@
             <img src="../assets/facebook.png" alt="">
           </div>
           <p>
-            Vous souhaitez booster votre trafic et vos ventes ? Elargir votre audience et votre stratégie marketing ?
+            Vous souhaitez booster votre trafic et vos ventes . Élargir votre audience et votre stratégie marketing .
             Facebook ads est l’opportunité qui vous faut pour propulser votre business toujours plus haut.
           </p>
         </div>
         <div class="card">
-          <h2>Creation de Funnel / Conversion</h2>
+          <h2>Création de tunnel / Conversion</h2>
           <div class="content-img">
             <img src="../assets/busines.png" alt="">
           </div>
           <p>
-            Nous créons des funnels sur mesure afin d'attirer vos prospects et de les convertir en clients . Les funnels créés sont spécialement conçus pour avoir un haut taux de conversion. Ne laissez plus vos prospects quittez votre page
+            Nous créons des tunnels sur mesure afin d'attirer vos prospects et de les convertir en clients . Les tunnels créés sont spécialement conçus pour avoir un haut taux de conversion. Ne laissez plus vos prospects quittez votre page
           </p>
         </div>
       </div>
@@ -60,10 +59,9 @@
       </div>
       <div class="desc">
         <h2>Qui sommes nous ?</h2>
-        <p>Crée en 2020 par Ibrahima Sy, Tiger Digital a très vite compris la problématique du Marketing digital actuel. Donner de la visibilité à des indépendants ou PME. Nous avons clairement voulu nous démarquer en apportant une authenticité et relation humaine forte avec nos clients. Tiger Digital s’est l’oeil du tigre . </p>
+        <p>Créé en 2020 par Ibrahima Sy, Tiger Digital a très vite compris la problématique du marketing digital actuel. Donner de la visibilité à des indépendants ou PME. Nous avons clairement voulu nous démarquer en apportant une authenticité et relation humaine forte avec nos clients. Tiger Digital c’est l’oeil du tigre.. </p>
         <h2>Notre Mission</h2>
-        <p>
-        Vous apportez la meilleure visibilité possible à travers différents canaux tel que Facebook, Instagram, Youtube ou Google. L’objectif est de mettre en place une stratégie digitale clé en main pour vous permettre de générer des prospects de manière récurrente. Et d’également améliorer l’image de marque de votre entreprise. </p>
+        <p>Vous apportez la meilleure visibilité possible à travers différents canaux tels que Facebook, Instagram, Youtube ou Google. L’objectif est de mettre en place une stratégie digitale clé en main pour vous permettre de générer des prospects de manière récurrente. Et d’également améliorer l’image de marque de votre entreprise. </p>
       </div>
     </section>
 
@@ -73,34 +71,35 @@
         <h2>Vous hésitez encore ?</h2>
         <p>Besoin d'un renseignement ? D'un devis ? D'une collaboration ? Nous sommes à votre écoute.</p>
       </div>
-      <form action="">
+      <form @submit.prevent="sendMessage">
         <div class="row">
           <div class="col">
             <div class="content-input">
-              <input type="text" placeholder="Votre nom">
+              <input type="text" placeholder="Votre nom" v-model="contact.name" required>
             </div>
           </div>
           <div class="col">
             <div class="content-input">
-              <input type="text" placeholder="Email">
+              <input type="text" placeholder="Email" v-model="contact.email" required>
             </div>
           </div>
           <div class="col">
             <div class="content-input">
-              <input type="tel" placeholder="Téléphone">
+              <input type="tel" placeholder="Téléphone" v-model="contact.telephone" required>
             </div>
           </div>
         </div>
-        <div class="row">
+        <div  class="row second">
           <div class="col">
             <div class="content-input">
-              <input type="text" placeholder="Message">
+              <input type="text" placeholder="Message" v-model="contact.message" required>
             </div>
           </div>
           <div class="col">
-            <button>Envoyer</button>
+            <button type="submit">Envoyer</button>
           </div>
         </div>
+        <p class="error">Votre message a bien été envoyer</p>
       </form>
     </section>
 
@@ -110,12 +109,34 @@
 
 <script>
 import Card from '~/components/Card'
+import {fireDb} from '~/plugins/firebase.js'
 
 export default {
   name: 'HomePage',
 
   components: {
     Card
+  },
+  data(){
+    return {
+      contact: {
+        name: null,
+        email: null,
+        message: null,
+        telephone: null
+      }
+    }
+  },
+  methods: {
+    sendMessage(){
+      fireDb.collection("prospects").add(this.contact)
+      .then((docRef) => {
+          console.log("Document written with ID: ", docRef.id);
+      })
+      .catch((error) => {
+          console.error("Error adding document: ", error);
+      });
+    }
   }
 }
 </script>
@@ -222,7 +243,7 @@ export default {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     margin-top: 20px;
-    &:last-child{
+    &.second{
       grid-template-columns: 2fr 1fr;
     }
     
