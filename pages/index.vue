@@ -44,12 +44,12 @@
                     </p>
                 </div>
                 <div class="card">
-                    <h2>Création de tunnel de ventes / Conversion</h2>
+                    <h2>Création de tunnel de vente / Conversion</h2>
                     <div class="content-img">
                         <img src="../assets/busines.png" alt="">
                     </div>
                     <p>
-                        Nous créons des tunnels de ventes sur mesure afin d'attirer vos prospects et de les convertir en clients . Les tunnels de ventes créés sont spécialement conçus pour avoir un haut taux de conversion. Ne laissez plus vos prospects quittez votre page
+                        Nous créons des tunnels de vente sur mesure afin d'attirer vos prospects et de les convertir en clients . Les tunnels de vente créés sont spécialement conçus pour avoir un haut taux de conversion. Ne laissez plus vos prospects quittez votre page
                     </p>
                 </div>
             </div>
