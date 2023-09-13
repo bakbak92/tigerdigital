@@ -62,6 +62,8 @@ button{
     text-align: center;
 }
 footer{
+    background-color: #272343;
+    color: white;
     text-align: center;
     overflow: hidden;
     line-height: 60px;

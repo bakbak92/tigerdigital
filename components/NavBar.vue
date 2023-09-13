@@ -1,7 +1,7 @@
 <template>
 <header>
     <nav class="desktop">
-        <img src="../assets/logo-3.png" alt="">
+        <img src="../assets/new-logo.png" alt="">
         <ul>
             <li>
                 <a href="#services">Nos services</a>
@@ -10,13 +10,13 @@
                 <a href="#why-are-we">Qui sommes nous</a>
             </li>
             <li>
-                <a href="#contact">Contact</a>
+                <a class="btn-contact" href="#contact">Contact</a>
             </li>
         </ul>
     </nav>
     <nav class="mobile">
         <div class="content-nav">
-            <img src="../assets/logo-3.png" alt="">
+            <img src="../assets/new-logo.png" alt="">
             <span>
                 <i class="fas fa-bars" @click="isActive = true"></i>
             </span>
@@ -28,10 +28,10 @@
                 <a href="#services" @click="isActive = false">Nos services</a>
             </li>
             <li>
-                <a href="#why-are-you" @click="isActive = false">Qui sommes nous</a>
+                <a href="#why-are-we" @click="isActive = false">Qui sommes nous</a>
             </li>
             <li>
-                <a href="#contact" @click="isActive = false">Contact</a>
+                <a class="btn-contact" href="#contact" @click="isActive = false">Contact</a>
             </li>
         </ul>
         <span>
@@ -103,6 +103,17 @@ export default {
         }
     }
 }
+li a.btn-contact{
+    background-color: #272343;
+    padding: 10px 20px;
+    border-radius: 5px;
+    color: white;
+    transition: all 0.3s ease-in-out;
+    &:hover{
+        background-color: #ffd803;
+        color: #272343;
+    }
+}
 .nav-dropdown{
     background-color: white;
     position: fixed;
@@ -117,6 +128,9 @@ export default {
             a{
                 text-decoration: none;
                 color: #2d334a;
+                &.btn-contact {
+                    color: white;
+                }
             }
         }
     }
